@@ -1,0 +1,81 @@
+Wild cards :
+
+* -> matches zero or more character
+? -> matches exactly one character
+
+[0-3] or [a-d] -> matches in this range
+
+default wild cards
+
+[[:digit:]] -> checks for digit
+[[:alnum:]] -> checks for alphanumeric value
+[[:alpha:]] -> checks for alphabate
+[[:lower:]] -> checks for lowercase
+[[:upper:]] -> checks for uppercase
+
+[!aeiou]* -> it will exclude specified values(characters)
+
+comparing files :
+
+diff one_file second_file -> directly show differnce in which line on cmd
+
+sdiff one_file second_file -> shows side by side difference of both files in cmd
+
+vimdiff one_file second_file -> shows side by side difference in vim editor
+
+grep command :
+
+->grep command is used to search in file
+
+shell alias :
+
+we can create alias of commads.
+example : alias cls='clear'
+
+Environment variables :
+
+-> To see all environment variables use command printenv
+
+
+Processes and Jobs :
+
+To display the currently runnig processes use command
+-> ps
+
+-> ps [options]
+
+-e = everything, all processes
+-f = full format listing
+-u username = Display processes running as username.
+-p pid = Display process information for pid. A PID is a process ID.
+
+
+Running Processes in the Foreground and Background
+
+command & = Start command in the background.
+Ctrl-c = Kill the foreground process.
+Ctrl-z = Suspend the foreground process.
+bg [%num] = Background a suspended process.
+fg [%num] = Foreground a background process.
+kill [%num] = Kill a process by job number or PID.
+jobs [%num] = List jobs
+
+
+Scheduling Repeated Jobs with Cron
+
+cron = A time based job scheduling service. This service is typically started when the system
+boots.
+
+crontab = A program to create, read, update, and delete your job schedul
+
+crontab format:
+
+* * * * * command
+
+1st * = Day of the Week
+2nd * = Month of the Year
+3rd * = Day of the Month
+4th * = Hour
+5th * = Minute
+
+histroy command : to see the history of shell.

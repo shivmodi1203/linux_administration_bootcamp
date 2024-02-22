@@ -1,0 +1,31 @@
+LVM = Logical Volume Manager
+
+Logical Volume Creation Process:
+
+-> Create one or more physical volumes.
+-> Create a volume group from those one or more physical volumes.
+-> Create one or more logical volumes from the volume group.
+
+Creating LVs : 
+
+-> pvcreate /dev/sdb
+-> vgcreate vg_name /dev/sdb
+-> lvcreate -L 100G -n lv_name vg_name
+-> mkfs -t ext4 /dev/vg_name/lv_name
+
+Extending LVs :
+
+-> lvextend -L +10G -r /dev/vg_name/lv_name
+-> pvcreate /dev/sdc
+-> vgextend vg_name /dev/sdc
+
+Mirrored LVs :
+
+-> lvcreate -m 1 -L 100G -n lv_name vg_name
+
+Removing LVs :
+
+-> lvremove /dev/vg_name/lv_name
+-> vgreduce vg_name /dev/sdb
+-> vgremove vg_name
+-> pvremove /dev/sdb

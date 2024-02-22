@@ -1,0 +1,37 @@
+Partitions :
+
+-Disk can be divided into parts,called partitions
+-Partition allows you to separat data
+
+
+MBR - Master Boot Record:
+
+-Can only address 2TB of disk space.
+-Being phased out by GPT(GPT = GUID Partition Table)
+-4 primary partitions
+-Extended partition allows you to create logical partitions
+
+GPT :
+-supports up to 128 partitions
+-supports up to 9ZB disk size
+
+Mount Points :
+
+-A directory used to access the data on a partition
+- / is always a mount point
+
+
+mkfs command :
+
+-> mkfs -t type device
+
+Mounting with mount :
+
+-> mount device mount_point
+
+In order to make mounts persiste between reboots,add an entry in the /etc/fstab file.
+
+Unmount with the unmount command : 
+
+-> unmount DEVICE or MOUNT_POINT
+

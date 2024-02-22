@@ -1,0 +1,47 @@
+Account have a : 
+
+User name
+User ID
+Default group
+Comments
+Shell
+Home Directory
+
+Create user
+
+adduser command :
+
+useradd [option] user_name
+
+-c "COMMENT" ->  comment for account
+-m -> create the home directory
+-s /shell/path -> the path to the user's shell
+-g GROUP -> specify the default group
+-G GORUP1,GROUPN -> additionals gorups
+
+Create a password of user :
+
+-> passwd user_name
+
+More useradd options
+
+-r -> create a system account
+
+-d /home/dir -> specify the home directory 
+
+Use -u to spcify the UID
+
+userdel command :
+
+userdel [option] user_name
+
+usermod command:
+
+usermod [option] user_name 
+
+
+Group information stored in /etc/group
+-> Create group with groupadd
+-> Delete group with groupdel
+-> Modify group with groupmod
+-> To view group memberships use groups.

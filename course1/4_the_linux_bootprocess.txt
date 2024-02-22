@@ -1,0 +1,23 @@
+Boot loader :
+
+LILO - Linux Loader
+
+GRUB - Grand Unified Bootloader
+
+What does bootloader do?
+
+-> bootloader starts th os. Bootloader can start os with different options.
+
+Roobting system with cmd :
+
+shutdown [option] time [message]
+
+->shutdown -r 15:30 "rebooting"
+->shutdown -r +n "rebooting soon"( n=minut)
+->shutdown -r now
+
+Poweroff system with cmd :
+
+->telinit 0
+->systemctl isolate poweroff target
+->poweroff

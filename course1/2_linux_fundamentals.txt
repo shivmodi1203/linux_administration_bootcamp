@@ -1,0 +1,162 @@
+Teh Linux Directory Structure
+
+/(root file system):
+It is the top-level filesystem directory. 
+It must include every file needed to boot the Linux system before another filesystem is mounted.
+
+/boot:
+File required to boot linux system stored in this dir.
+
+/bin:
+This dir includes user executable programs.
+
+/dev:
+It includes the device file for all hardware device connected to the system
+
+/etc:
+It includes local system configuration file for the host system
+
+/lib: 
+It includes shared library files that are needed to start the system.
+
+/home: 
+The home directory storage is available for user files. 
+All users have a subdirectory inside /home.
+
+/mnt: 
+It is a temporary mount point for basic filesystems that can be used at the time when the administrator is working or repairing a filesystem.
+
+/media: 
+A place for mounting external removable media devices like USB thumb drives that might be linked to the host.
+    
+/opt:
+It contains optional files like vendor supplied application programs that must be placed here.
+    
+/root: 
+It's the home directory for a root user. Keep in mind that it's not the '/' (root) file system.
+    
+/tmp: 
+It is a temporary directory used by the OS and several programs for storing temporary files. Also, users may temporarily store files here. Remember that files may be removed without prior notice at any time in this directory.
+    
+/sbin: 
+These are system binary files. They are executables utilized for system administration.
+    
+/usr: 
+They are read-only and shareable files, including executable libraries and binaries, man files, and several documentation types.
+    
+/var: 
+Here, variable data files are saved. It can contain things such as MySQL, log files, other database files, email inboxes, web server data files, and much more.
+
+* What is the shell ?
+
+-> The shell is defalut interface to linux.
+
+Command line interface vs a GUI:
+
+-> The command line is more powerfull
+-> There will alway be command line
+-> Server distribution do not includes GUIs
+-> Connect over network
+
+Root - The Superuser :
+
+The superuser on a Linux system is also called root. Anything that can be done on a server can
+be done by root. However, normal users can only do a subset of the things root can do. Root
+access is typically restricted to system administrators, but if you happen to support an application
+on a Linux server you may need root privileges to install, start, or stop it. There are ways to grant
+specific users root privileges for specific cases. This is often accomplished with the sudo --
+SuperUser Do -- program. That will be covered later. For now, just know that most of your day to
+day activities will be performed using a normal user account.
+
+
+Tild Expression :
+~ represents the home directory(Your home directory or current account home directory).
+
+
+Essential linux commands :
+
+pwd - Show the present working directory
+
+cd - This command is used to change directory
+
+ls - List files
+
+cat - concatenates and display files.
+
+clear - clear screen
+
+man - this command will show manual of any command
+
+mkdir - to make directory
+
+example : mkdir dir1
+
+mkdir -p dir1/dir2/dir3 - this command will make directories recursively
+
+ls Commad :
+
+ls -l
+It will shows:
+->permissions
+->no. of links
+-> owner name
+-> Group name
+-> no. of bytes in the file
+-> last modification time
+-> file name
+
+ls -a -> shows the hidden files
+
+Use ls -F to reveal fiel type
+/ -> directory
+@ -> linnk
+* -> executable
+
+ls [options]
+
+-r -> display in reverse order
+-R -> display recursively
+-la -> all files long listig formate
+-t -> display by time
+
+
+Symbol	 Permission
+  r	   read
+  w	   write
+  x	   execute
+
+Permission catagories
+
+Symbol	 Catagory
+ u	  user
+ g	  group
+ o        other
+ a	  all
+
+umask :
+
+			directory	file
+base permission		 777		666
+subtract mask		-002		-002
+creation permission	 775		664
+
+
+sort command :
+
+sort [option] file_name
+
+-u -> shows unique lines
+-r -> sort in reverse order
+
+tar command :
+
+tar [option] new_file_name file_name
+
+new_file_name = create a new file with this specified name
+
+-c -> create a tar archive
+-x -> extract file from the archive
+-t -> display the table of content
+-v -> be verbose (shows detail about runnig tar)
+-z -> use compression
+-f -> use this file

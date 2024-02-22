@@ -1,0 +1,26 @@
+Linux Distributions :
+-> Ubuntu
+-> Alma Linux
+-> Debian Linux
+-> Kali Linux
+-> Oracle Linux
+-> SUSE
+
+How to install linux distribution using wsl command on window
+	wsl = Windows Subsystem for Linux
+-> wsl --install (By default it will install Ubuntu)
+-> wsl --install -d distro_name
+
+To see Linux destributions available online use command
+-> wsl -l -o
+
+Also you can use microsoft store to install linux distribution
+
+To uninstall linux distribution use command
+
+-> wsl --unregister diestro_name
+
+Issues while installing virtual box:
+-> Antivirus conflicts
+-> x86-64 cpu but detected i686
+-> Simple Reboot
